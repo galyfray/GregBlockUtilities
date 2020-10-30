@@ -73,7 +73,6 @@ dependencies {
     deobfCompile "net.sengir.forestry:forestry_${minecraft_version}:${forestry_version}"
     deobfCompile "binnie:binnie-mods-${minecraft_version}:${binnie_version}"
     deobfCompile "gregtechce:gregtech:${minecraft_version}:${gt_version}"
-    compile files("libs/BetterQuesting-${bq_version}.jar")
     compile files("libs/Shadows_of_Greg-${minecraft_version}-${ga_version}.jar")
 }
 
