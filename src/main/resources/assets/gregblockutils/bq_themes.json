@@ -19,199 +19,168 @@
         "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
         "bounds": [0, 128, 128, 128],
         "padding": [32, 32, 32, 32],
-        "sliceMode": 2
+        "sliceMode": 1
       },
       "betterquesting:panel_inner":
       {
         "textureType": "betterquesting:texture_sliced",
         "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
-        "bounds": [0, 0, 48, 48],
-        "padding": [16, 16, 16, 16],
+        "bounds": [18, 48, 24, 24],
+        "padding": [8, 8, 8, 8],
         "sliceMode": 2
       },
       "betterquesting:scroll_v_bg":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [56, 16, 8, 8],
-        "padding": [3, 2, 3, 2],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [248, 0, 8, 60],
+        "padding": [1, 1, 1, 1],
         "sliceMode": 1
       },
       "betterquesting:scroll_v_0":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [64, 16, 8, 8],
-        "padding": [2, 3, 2, 3],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [248, 60, 8, 20],
+        "padding": [3, 4, 3, 4],
         "sliceMode": 2
       },
       "betterquesting:scroll_v_1":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [72, 16, 8, 8],
-        "padding": [2, 3, 2, 3],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [248, 60, 8, 20],
+        "padding": [3, 4, 3, 4],
         "sliceMode": 2
       },
       "betterquesting:scroll_v_2":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [80, 16, 8, 8],
-        "padding": [2, 3, 2, 3],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [248, 60, 8, 20],
+        "padding": [3, 4, 3, 4],
         "sliceMode": 2
       },
       "betterquesting:scroll_h_bg":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [56, 8, 8, 8],
-        "padding": [2, 3, 2, 3],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [188, 60, 20, 8],
+        "padding": [1, 1, 1, 1],
         "sliceMode": 1
       },
       "betterquesting:scroll_h_0":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [64, 8, 8, 8],
-        "padding": [2, 3, 2, 3],
-        "sliceMode": 2
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [168, 60, 20, 8],
+        "padding": [4, 3, 4, 3],
+        "sliceMode": 1
       },
       "betterquesting:scroll_h_1":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [72, 8, 8, 8],
-        "padding": [2, 3, 2, 3],
-        "sliceMode": 2
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [168, 60, 20, 8],
+        "padding": [4, 3, 4, 3],
+        "sliceMode": 1
       },
       "betterquesting:scroll_h_2":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [80, 8, 8, 8],
-        "padding": [2, 3, 2, 3],
-        "sliceMode": 2
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [168, 60, 20, 8],
+        "padding": [4, 3, 4, 3],
+        "sliceMode": 1
       },
       "betterquesting:btn_normal_0":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [48, 0, 8, 8],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [48, 0, 200, 20],
         "padding": [3, 3, 3, 3],
         "sliceMode": 1
       },
       "betterquesting:btn_normal_1":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [48, 8, 8, 8],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [48, 20, 200, 20],
         "padding": [3, 3, 3, 3],
         "sliceMode": 1
       },
       "betterquesting:btn_normal_2":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [48, 16, 8, 8],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [48, 40, 200, 20],
         "padding": [3, 3, 3, 3],
         "sliceMode": 1
       },
       "betterquesting:quest_norm_0":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [0,32,24,24],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [0,104,24,24],
         "padding": [8,8,8,8],
-        "sliceMode": 2
+        "sliceMode": 1
       },
       "betterquesting:quest_norm_1":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [0,32,24,24],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [0,104,24,24],
         "padding": [8,8,8,8],
-        "sliceMode": 2
+        "sliceMode": 1
       },
       "betterquesting:quest_norm_2":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [0,32,24,24],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [0,104,24,24],
         "padding": [8,8,8,8],
-        "sliceMode": 2
+        "sliceMode": 1
       },
       "betterquesting:quest_norm_3":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [0,32,24,24],
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [0,104,24,24],
         "padding": [8,8,8,8],
-        "sliceMode": 2
+        "sliceMode": 1
       },
       "betterquesting:quest_main_0":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [24,32,24,24],
-        "padding": [5,5,5,5],
-        "sliceMode": 2
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [24,104,24,24],
+        "padding": [8,8,8,8],
+        "sliceMode": 1
       },
       "betterquesting:quest_main_1":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [24,32,24,24],
-        "padding": [5,5,5,5],
-        "sliceMode": 2
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [24,104,24,24],
+        "padding": [8,8,8,8],
+        "sliceMode": 1
       },
       "betterquesting:quest_main_2":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [24,32,24,24],
-        "padding": [5,5,5,5],
-        "sliceMode": 2
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [24,104,24,24],
+        "padding": [8,8,8,8],
+        "sliceMode": 1
       },
       "betterquesting:quest_main_3":
       {
         "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [24,32,24,24],
-        "padding": [5,5,5,5],
-        "sliceMode": 2
-      },
-      "betterquesting:quest_aux_0":
-      {
-        "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [48,32,24,24],
-        "padding": [6,6,6,6],
-        "sliceMode": 2
-      },
-      "betterquesting:quest_aux_1":
-      {
-        "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [48,32,24,24],
-        "padding": [6,6,6,6],
-        "sliceMode": 2
-      },
-      "betterquesting:quest_aux_2":
-      {
-        "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [48,32,24,24],
-        "padding": [6,6,6,6],
-        "sliceMode": 2
-      },
-      "betterquesting:quest_aux_3":
-      {
-        "textureType": "betterquesting:texture_sliced",
-        "atlas": "betterquesting:textures/gui/new_gui.png",
-        "bounds": [48,32,24,24],
-        "padding": [6,6,6,6],
-        "sliceMode": 2
+        "atlas": "gregblockutils:textures/gui/editor_gui_gb.png",
+        "bounds": [24,104,24,24],
+        "padding": [8,8,8,8],
+        "sliceMode": 1
+
       }
     },
     "colors":
@@ -219,7 +188,7 @@
       "betterquesting:text_header":
       {
         "colorType": "betterquesting:color_static",
-        "color": "FFFFFFFF"
+        "color": "FFE600FF"
       },
       "betterquesting:text_main":
       {
