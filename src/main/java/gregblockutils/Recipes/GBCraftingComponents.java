@@ -213,7 +213,7 @@ public enum GBCraftingComponents {
                 case 7:
                     return new UnificationEntry(OrePrefix.plate, Materials.HSSE);
                 default:
-                    return new UnificationEntry(OrePrefix.plate, GAMaterials.Neutronium);
+                    return new UnificationEntry(OrePrefix.plate, Materials.NaquadahAlloy);
 
             }
         }
@@ -296,7 +296,6 @@ public enum GBCraftingComponents {
             switch (tier) {
                 case 0:
                 case 1:
-                    return new UnificationEntry(OrePrefix.gem, Materials.Diamond);
                 case 2:
                     return new UnificationEntry(OrePrefix.gem, Materials.Diamond);
                 default:
