@@ -16,6 +16,7 @@ public class RecipeMapExtended<R extends RecipeBuilder<R>> extends RecipeMap {
     private TextureArea progressBarTexture;
     private ProgressWidget.MoveType moveType;
 
+    @SuppressWarnings("unchecked")
     public RecipeMapExtended(String unlocalizedName, int minInputs, int maxInputs, int minOutputs, int maxOutputs, int minFluidInputs, int maxFluidInputs, int minFluidOutputs, int maxFluidOutputs, R defaultRecipe) {
         super(unlocalizedName, minInputs, maxInputs, minOutputs, maxOutputs, minFluidInputs, maxFluidInputs, minFluidOutputs, maxFluidOutputs, defaultRecipe);
     }
@@ -29,6 +30,7 @@ public class RecipeMapExtended<R extends RecipeBuilder<R>> extends RecipeMap {
 
     public ModularUI.Builder createUITemplate(DoubleSupplier progressSupplier, IItemHandlerModifiable importItems, IItemHandlerModifiable exportItems, FluidTankList importFluids, FluidTankList exportFluids) {
         ModularUI.Builder builder = new ModularUI.Builder(GuiTextures.BACKGROUND_EXTENDED, 176, 216) {
+            @SuppressWarnings("unchecked")
             public ModularUI.Builder bindPlayerInventory(InventoryPlayer inventoryPlayer) {
                 this.bindPlayerInventory(inventoryPlayer, 134);
                 return this;
