@@ -29,7 +29,7 @@ public class GregBlockUtils {
     public static final String NAME = "GregBlock Utilities";
     public static final String VERSION = "@VERSION@";
 
-    private static Logger logger;
+    public static Logger logger;
 
     public GregBlockUtils() {
         GBEnums.preInit();
@@ -39,6 +39,7 @@ public class GregBlockUtils {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         GBMetaItems.preInit();
+        logger=event.getModLog();
         new GBItems();
         SieveDrops.addSieveRecipe();
         ExNihiloRegistryManager.registerSieveDefaultRecipeHandler(new GBSieveDrops());
