@@ -28,9 +28,10 @@ import gregtech.common.items.MetaItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.oredict.OreDictionary;
 
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class GBRecipeAddition {
@@ -38,11 +39,33 @@ public class GBRecipeAddition {
         for (SieveRecipe recipe : ExNihiloRegistryManager.SIEVE_REGISTRY.getRecipeList()) {
             for (ItemStack stack : recipe.getSievables()) {
                 SimpleRecipeBuilder builder = GBRecipeMaps.SIEVE_RECIPES.recipeBuilder();
+
                 builder.notConsumable(recipe.getMesh()).inputs(stack);
-                for (Siftable siftable : ExNihiloRegistryManager.SIEVE_REGISTRY.getDrops(stack)) {
-                    if (siftable.getMeshLevel() == recipe.getMesh().getMetadata())
-                        builder.chancedOutput(siftable.getDrop().getItemStack(), (int) (siftable.getChance() * (float) Recipe.getMaxChancedValue()),1000);
+
+                ArrayList<Siftable> siftables = ExNihiloRegistryManager.SIEVE_REGISTRY.getDrops(stack).stream().filter(
+                        siftable -> siftable.getMeshLevel() == recipe.getMesh().getMetadata()
+                ).collect(Collectors.toCollection(ArrayList::new));
+
+                if (siftables.size() > 24){
+                    HashMap<NBTTagCompound,Integer> chanceMap = new HashMap<>();
+                    NBTTagCompound item;
+                    for (Siftable siftable: siftables) {
+                        item = Objects.requireNonNull(siftable.getDrop()).getItemStack().serializeNBT();
+                        chanceMap.put(item,  (int)(siftable.getChance() * Recipe.getMaxChancedValue())*Objects.requireNonNull(siftable.getDrop()).getItemStack().getCount() + chanceMap.getOrDefault(item,0));
+                    }
+
+                    chanceMap.forEach((loot, chance) ->{
+                        ItemStack itemStack = new ItemStack(loot);
+                        itemStack.grow(chance/10000);
+                        builder.chancedOutput(itemStack,chance % 10000,chance % 10000);
+                    });
+
+                } else {
+                    for (Siftable siftable: siftables) {
+                        builder.chancedOutput(Objects.requireNonNull(siftable.getDrop()).getItemStack() , (int)(siftable.getChance() * Recipe.getMaxChancedValue()), (int)(siftable.getChance() * Recipe.getMaxChancedValue()));
+                    }
                 }
+
                 builder.duration(100).EUt(4);
                 builder.buildAndRegister();
             }
