@@ -9,28 +9,28 @@ import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraftforge.items.IItemHandlerModifiable;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.DoubleSupplier;
 
-public class RecipeMapExtended<R extends RecipeBuilder<R>> extends RecipeMap {
+public class RecipeMapExtended<R extends RecipeBuilder<R>> extends RecipeMap<R> {
     private TextureArea progressBarTexture;
     private ProgressWidget.MoveType moveType;
 
-    @SuppressWarnings("unchecked")
+
     public RecipeMapExtended(String unlocalizedName, int minInputs, int maxInputs, int minOutputs, int maxOutputs, int minFluidInputs, int maxFluidInputs, int minFluidOutputs, int maxFluidOutputs, R defaultRecipe) {
         super(unlocalizedName, minInputs, maxInputs, minOutputs, maxOutputs, minFluidInputs, maxFluidInputs, minFluidOutputs, maxFluidOutputs, defaultRecipe);
     }
 
-    public RecipeMap<R> setProgressBar(TextureArea progressBar, ProgressWidget.MoveType moveType) {
+    public @NotNull RecipeMap<R> setProgressBar(TextureArea progressBar, ProgressWidget.MoveType moveType) {
         this.progressBarTexture = progressBar;
         this.moveType = moveType;
         super.setProgressBar(progressBar, moveType);
         return this;
     }
 
-    public ModularUI.Builder createUITemplate(DoubleSupplier progressSupplier, IItemHandlerModifiable importItems, IItemHandlerModifiable exportItems, FluidTankList importFluids, FluidTankList exportFluids) {
-        ModularUI.Builder builder = new ModularUI.Builder(GuiTextures.BACKGROUND_EXTENDED, 176, 216) {
-            @SuppressWarnings("unchecked")
+    public ModularUI.@NotNull Builder createUITemplate(DoubleSupplier progressSupplier, IItemHandlerModifiable importItems, IItemHandlerModifiable exportItems, FluidTankList importFluids, FluidTankList exportFluids) {
+        ModularUI.Builder builder = new ModularUI.Builder(GuiTextures.BACKGROUND, 176, 216) {
             public ModularUI.Builder bindPlayerInventory(InventoryPlayer inventoryPlayer) {
                 this.bindPlayerInventory(inventoryPlayer, 134);
                 return this;
@@ -80,7 +80,7 @@ public class RecipeMapExtended<R extends RecipeBuilder<R>> extends RecipeMap {
         }
     }
 
-    protected static int[] determineSlotsGrid(int itemInputsCount) {
+    protected static int @NotNull [] determineSlotsGrid(int itemInputsCount) {
         int itemSlotsToLeft = 0;
         int itemSlotsToDown = 0;
         double sqrt = Math.sqrt(itemInputsCount);
