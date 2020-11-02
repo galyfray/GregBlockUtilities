@@ -2,6 +2,7 @@ package gregblockutils.Machines;
 
 import gregblockutils.GregBlockUtils;
 import gregblockutils.Recipes.GBRecipeMaps;
+import gregicadditions.GregicAdditions;
 import gregtech.api.GregTechAPI;
 import gregtech.api.metatileentity.SimpleMachineMetaTileEntity;
 import gregtech.api.render.Textures;
@@ -13,10 +14,12 @@ public class GBTileEntities {
 
     public static SteamPump STEAM_PUMP;
     public static SteamSieve STEAM_SIEVE;
+    public static SteamMixer STEAM_MIXER;
 
     public static SteamRockBreaker STEAM_BREAKER;
 
     public static void init() {
+        STEAM_MIXER = GregTechAPI.registerMetaTileEntity(2221, new SteamMixer(new ResourceLocation(GregicAdditions.MODID,"steam_mixer"), false));
         STEAM_SIEVE = GregTechAPI.registerMetaTileEntity(2749, new SteamSieve(location("sieve.steam"), false));
 
         ELECTRIC_SIEVE[0] = GregTechAPI.registerMetaTileEntity(2750, new SimpleMachineMetaTileEntity(location("sieve.lv"), GBRecipeMaps.SIEVE_RECIPES, Textures.SIFTER_OVERLAY, 1));
