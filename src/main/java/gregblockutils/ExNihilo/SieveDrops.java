@@ -319,7 +319,7 @@ public class SieveDrops {
         addRecipe(end, Materials.Lithium, 0.0128, 3);
     }
 
-    public void preInit() {
+    public static void preInit() {
         ExNihiloRegistryManager.registerSieveDefaultRecipeHandler(new GBSieveDrops());
     }
 

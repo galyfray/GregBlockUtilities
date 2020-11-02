@@ -49,6 +49,6 @@ public class GBEnums {
     }
 
     private static Predicate<Material> pred(Predicate<Material> in) {
-        return (mat) -> in.test(mat);
+        return in;
     }
 }

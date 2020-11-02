@@ -16,6 +16,6 @@ public class GBTextures {
 
     static {
         STEAM_PUMP_OVERLAY = new SimpleOverlayRenderer("overlay/machine/overlay_steam_pump");
-        BEE_ATTRACTOR = new OrientedOverlayRenderer("machines/attractor", new OrientedOverlayRenderer.OverlayFace[]{OverlayFace.FRONT, OverlayFace.SIDE});
+        BEE_ATTRACTOR = new OrientedOverlayRenderer("machines/attractor", OverlayFace.FRONT, OverlayFace.SIDE);
     }
 }

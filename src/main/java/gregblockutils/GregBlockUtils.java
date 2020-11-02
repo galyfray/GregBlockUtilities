@@ -42,7 +42,7 @@ public class GregBlockUtils {
         logger=event.getModLog();
         new GBItems();
         SieveDrops.addSieveRecipe();
-        ExNihiloRegistryManager.registerSieveDefaultRecipeHandler(new GBSieveDrops());
+        SieveDrops.preInit();
     }
 
     @EventHandler

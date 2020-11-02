@@ -86,7 +86,8 @@ public class GBRecipeAddition {
                 .flatMap(stack -> ModHandler.getAllSubItems(stack).stream())
                 .collect(Collectors.toList());
 
-        for (ItemStack stack : allFlowers)
+        assert BeeManager.beeRoot != null;
+        for (ItemStack stack : allFlowers) {
             GBRecipeMaps.ATTRACTOR_RECIPES.recipeBuilder().notConsumable(GTUtility.copyAmount(1, stack)).fluidInputs(Fluids.SEED_OIL.getFluid(100))
                     .chancedOutput(BeeManager.beeRoot.getMemberStack(BeeDefinition.FOREST.getIndividual(), EnumBeeType.PRINCESS), 1000,1000)
                     .chancedOutput(BeeManager.beeRoot.getMemberStack(BeeDefinition.FOREST.getIndividual(), EnumBeeType.DRONE), 3000,1000)
@@ -95,6 +96,7 @@ public class GBRecipeAddition {
                     .chancedOutput(BeeManager.beeRoot.getMemberStack(BeeDefinition.VALIANT.getIndividual(), EnumBeeType.PRINCESS), 100,1000)
                     .chancedOutput(BeeManager.beeRoot.getMemberStack(BeeDefinition.VALIANT.getIndividual(), EnumBeeType.DRONE), 300,1000)
                     .EUt(26).duration(200).buildAndRegister();
+        }
 
         GBRecipeMaps.ATTRACTOR_RECIPES.recipeBuilder().notConsumable(new ItemStack(Blocks.BROWN_MUSHROOM)).fluidInputs(Fluids.SEED_OIL.getFluid(100))
                 .chancedOutput(BeeManager.beeRoot.getMemberStack(BeeDefinition.MARSHY.getIndividual(), EnumBeeType.PRINCESS), 1000,1000)
