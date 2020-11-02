@@ -1,12 +1,10 @@
 package gregblockutils;
 
-import exnihilocreatio.registries.manager.ExNihiloRegistryManager;
 import gregblockutils.Events.StoneGenEvents;
-import gregblockutils.ExNihilo.GBSieveDrops;
+import gregblockutils.ExNihilo.SieveDrops;
 import gregblockutils.Items.GBEnums;
 import gregblockutils.Items.GBItems;
 import gregblockutils.Items.GBMetaItems;
-import gregblockutils.ExNihilo.SieveDrops;
 import gregblockutils.Machines.GBTextures;
 import gregblockutils.Machines.GBTileEntities;
 import gregblockutils.Recipes.GBMachineRecipes;

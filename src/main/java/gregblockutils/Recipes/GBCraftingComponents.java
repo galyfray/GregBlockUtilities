@@ -1,6 +1,5 @@
 package gregblockutils.Recipes;
 
-import gregicadditions.GAMaterials;
 import gregicadditions.item.GAMetaBlocks;
 import gregicadditions.item.GATransparentCasing;
 import gregtech.api.items.OreDictNames;
