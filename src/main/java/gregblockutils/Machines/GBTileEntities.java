@@ -9,6 +9,10 @@ import gregtech.api.render.Textures;
 import net.minecraft.util.ResourceLocation;
 
 public class GBTileEntities {
+    public static CokeFluidHatch COKE_FLUID_HATCH ;
+    public static CokeItemBus COKE_ITEM_BUS;
+    public static CokeOven COKE_OVEN;
+
     public static SimpleMachineMetaTileEntity[] ELECTRIC_SIEVE = new SimpleMachineMetaTileEntity[8];
     public static SimpleMachineMetaTileEntity[] BEE_ATTRACTOR = new SimpleMachineMetaTileEntity[8];
 
@@ -19,6 +23,10 @@ public class GBTileEntities {
     public static SteamRockBreaker STEAM_BREAKER;
 
     public static void init() {
+        COKE_OVEN = GregTechAPI.registerMetaTileEntity(2500, new CokeOven(new ResourceLocation(GregicAdditions.MODID,"ga_coke_oven")));
+        COKE_FLUID_HATCH = GregTechAPI.registerMetaTileEntity(2509, new CokeFluidHatch(new ResourceLocation(GregicAdditions.MODID,"ga_coke_fluid_hatch")));
+        COKE_ITEM_BUS = GregTechAPI.registerMetaTileEntity(2508, new CokeItemBus(new ResourceLocation(GregicAdditions.MODID,"ga_coke_item_bus")));
+
         STEAM_MIXER = GregTechAPI.registerMetaTileEntity(2221, new SteamMixer(new ResourceLocation(GregicAdditions.MODID,"steam_mixer"), false));
         STEAM_SIEVE = GregTechAPI.registerMetaTileEntity(2749, new SteamSieve(location("sieve.steam"), false));
 
